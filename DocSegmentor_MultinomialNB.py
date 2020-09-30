@@ -3,7 +3,7 @@ import glob
 import numpy as np
 import shutil
 
-file_path = r"C:\Users\jindal\Documents\Kanika Office\bbc_train\bbc"
+file_path = r"..\bbc_train\bbc"
 
 ######################TRAINING DATASET PREPARATION#############################
 
@@ -94,8 +94,8 @@ model.fit(X_train, y_train)
 
 ##############################TEST DATASET PREPARATION#########################
   
-test_file = r"C:\Users\jindal\Documents\Kanika Office\bbc_test"
-#destination_path = r"C:\Users\jindal\Documents\Kanika Office\bbc_sorted"
+test_file = r"..\bbc_test"
+#destination_path = r"..\bbc_sorted"
 
 dataset_test = pd.DataFrame()
 list_file_test = []
@@ -129,7 +129,7 @@ required_folders = dataset_test['PredictedType'].unique().tolist()
 import os
 for i in required_folders:
 # define the name of the directory to be created
-    path = "C:\\Users\\jindal\\Documents\\Kanika Office\\bbc_sorted_2\\" + i
+    path = "..\\bbc_sorted_2\\" + i
     try:
         os.makedirs(path)
     except OSError:
@@ -140,7 +140,7 @@ for i in required_folders:
 for i in range(len(dataset_test)):
     print (i)
     source = dataset_test['File Names'][i]
-    destination =  "C:\\Users\\jindal\\Documents\\Kanika Office\\bbc_sorted_2\\" + "\\" + dataset_test['PredictedType'][i] 
+    destination =  "..\\bbc_sorted_2\\" + "\\" + dataset_test['PredictedType'][i] 
     shutil.copy(source, destination)
     
 ##############################FINAL DATASET EXTRACTION#########################
