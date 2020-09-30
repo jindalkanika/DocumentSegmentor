@@ -77,6 +77,21 @@ X_train, X_test, y_train, y_test, indices_train, indices_test = train_test_split
                                                                                  random_state=1)
 model.fit(X_train, y_train)
 
+
+
+#################################RANDOM FOREST CLASSIFIER TRAINING#############
+
+#from sklearn.model_selection import train_test_split
+#from sklearn.ensemble import RandomForestClassifier
+
+#model = RandomForestClassifier(n_estimators=200, max_depth=5, random_state=1)
+
+#X_train, X_test, y_train, y_test, indices_train, indices_test = train_test_split(features, labels, 
+                                                                                 dataset.index, 
+                                                                                 test_size=2, 
+                                                                                 random_state=1)
+#model.fit(X_train, y_train)
+
 ##############################TEST DATASET PREPARATION#########################
   
 test_file = r"C:\Users\jindal\Documents\Kanika Office\bbc_test"
